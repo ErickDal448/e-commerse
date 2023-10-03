@@ -46,7 +46,7 @@ const ListCategories = () => {
             {location.pathname !== '/' && 
             <div className='AllProducts'>
                 <h2>Todos los productos</h2>
-                <Link to={'https://erickdal448.github.io/e-commerse/build/Home/Editor/Crear'}><button type="button" className="btn btn-primary">Agregar Producto</button></Link>
+                <Link to={'/e-commerse/build/Home/Editor/Crear'}><button type="button" className="btn btn-primary">Agregar Producto</button></Link>
             </div>
             }
             {
@@ -69,10 +69,10 @@ const ListCategories = () => {
                     categories.map(category => (
                         categoryFilter === '' || category.id === categoryFilter ? (
                           <li className={`category-list__category category-list__category--${category.id}`}
-                            style={location.pathname !== '/' ? { paddingTop: '0rem' } : {}}
+                            style={location.pathname !== '/e-commerse/build/' ? { paddingTop: '0rem' } : {}}
                           >
                             <div className='divCategorie'>
-                                {location.pathname === '/' && (
+                                {location.pathname === '/e-commerse/build/' && (
                                     <>
                                         <h2>{category.id} </h2>
                                         <button 
@@ -87,7 +87,7 @@ const ListCategories = () => {
     
                             <div className='divPosts'>
     
-                            {(categoryFilter === '' && location.pathname === '/') ? <ListPosts posts={filteredPosts.filter(post => post.categoria === category.id).slice(0, isSmallScreen ? 4 : 6)} /> : <ListPosts posts={filteredPosts.filter(post => post.categoria === category.id)} />}
+                            {(categoryFilter === '' && location.pathname === '/e-commerse/build/') ? <ListPosts posts={filteredPosts.filter(post => post.categoria === category.id).slice(0, isSmallScreen ? 4 : 6)} /> : <ListPosts posts={filteredPosts.filter(post => post.categoria === category.id)} />}
                             </div>
                           </li>
                         ) : null

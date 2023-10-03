@@ -49,7 +49,7 @@ const Iniciar = () => {
 
             if (user.length > 0) {
                 // El usuario existe, redirige a la página siguiente
-                navigate('/Home/Editor');
+                navigate('/e-commerse/build/Home/Editor');
             } else {
                 // Usuario no encontrado, muestra una alerta
                 alert("Usuario no encontrado...");

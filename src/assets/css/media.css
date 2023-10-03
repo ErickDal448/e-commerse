@@ -1,0 +1,87 @@
+.promoDiv button{
+    width: 10rem;
+}
+.promoDiv{
+    background-size: 100% auto;
+    width: auto;
+    color: white;
+    padding: 8rem 3rem 3rem 3rem;
+}
+
+@media (max-width: 1100px) { 
+    .promoDiv{
+        background-size: auto;
+        width: auto;
+        color: white;
+        padding: 6rem 2rem 2rem 2rem;
+    }
+    .promoDiv h1{
+        padding-top: 0rem;
+    }
+    .promoDiv button{
+        width: 9rem;
+    }
+}
+@media (max-width: 800px) { 
+    /* Header */
+    
+    .header__container{
+        padding: 1rem;
+    
+    }
+    
+    .searchDiv{
+        margin-left: 2rem;
+    }
+
+    /* Promo */
+    
+    .promoDiv{
+        background-size: auto;
+        width: auto;
+        color: white;
+        text-shadow: -1px 1px 0 #000,
+                          1px 1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
+        padding: 8rem 2rem 2rem 2rem;
+        background-position-x: center;
+    }
+    .promoDiv h1{
+        padding-top: 0rem;
+    }
+    .promoDiv button{
+        width: 9rem;
+    }
+
+    /* Footer */
+    .footer .header__container{
+        flex-direction: column;
+    }
+}
+@media (max-width: 450px) {
+    
+    .header__container{
+        width: auto;
+        flex-direction: row-reverse;
+    }
+    .searchDiv{
+        width: auto;
+        margin-left: 5px;
+    }
+    .SearchIn{
+        display: none;
+    }
+    .login-link{
+       margin-right: 1rem;
+       margin-left: 0px;
+    }
+
+    .card{
+        width: 8rem ;
+    }
+
+    .footer{
+        flex-direction: column;
+    }
+}

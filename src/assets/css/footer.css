@@ -1,0 +1,31 @@
+.footer{
+    background-color: var(--cor-de-footer);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.ulAbout li{
+    margin: 1.5rem;
+    cursor: pointer;
+}
+
+.ulAbout li:hover{
+    color: goldenrod;
+}
+
+section.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--cor-de-white);
+}
+
+.footer__rodape{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,169 @@
+{
+  "User": [
+    {
+      "id": 0,
+      "email": "Erick@alura.com",
+      "Password": "ABC12345"
+    }
+  ],
+  "categorias": [
+    {
+      "id": "Star Wars",
+      "nombre": "Star Wars"
+    },
+    {
+      "id": "Consolas",
+      "nombre": "Consolas"
+    },
+    {
+      "id": "Diversos",
+      "nombre": "Diversos"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "url": "/assets/img/unsplash_6FDXGY9J6y4.jpg",
+      "nombre": "Prueba",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aspernatur nostrum fugiat impedit esse sint, at odit tempore. Quae rerum inventore laboriosam reiciendis voluptate fugit praesentium molestiae natus illo magni!",
+      "categoria": "Star Wars",
+      "precio": 60
+    },
+    {
+      "id": 2,
+      "url": "/assets/img/Skill.jpg",
+      "nombre": "Producto XYZ",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aspernatur nostrum fugiat impedit esse sint, at odit tempore. Quae rerum inventore laboriosam reiciendis voluptate fugit praesentium molestiae natus illo magni!",
+      "categoria": "Star Wars",
+      "precio": 60
+    },
+    {
+      "id": 3,
+      "url": "/assets/img/unsplash_KeGToDVN0l4.jpg",
+      "nombre": "Producto XYZ",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aspernatur nostrum fugiat impedit esse sint, at odit tempore. Quae rerum inventore laboriosam reiciendis voluptate fugit praesentium molestiae natus illo magni!",
+      "categoria": "Star Wars",
+      "precio": 60
+    },
+    {
+      "id": 4,
+      "url": "/assets/img/unsplash_4OHkK555s1A.jpg",
+      "nombre": "Producto XYZ",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aspernatur nostrum fugiat impedit esse sint, at odit tempore. Quae rerum inventore laboriosam reiciendis voluptate fugit praesentium molestiae natus illo magni!",
+      "categoria": "Star Wars",
+      "precio": 60
+    },
+    {
+      "id": 5,
+      "url": "/assets/img/unsplash_R8L1l9RN198.jpg",
+      "nombre": "Yoda",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aspernatur nostrum fugiat impedit esse sint, at odit tempore. Quae rerum inventore laboriosam reiciendis voluptate fugit praesentium molestiae natus illo magni!",
+      "categoria": "Star Wars",
+      "precio": 60
+    },
+    {
+      "id": 6,
+      "url": "/assets/img/unsplash_1VV1MRafd7A.jpg",
+      "nombre": "Producto XYZ",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aspernatur nostrum fugiat impedit esse sint, at odit tempore. Quae rerum inventore laboriosam reiciendis voluptate fugit praesentium molestiae natus illo magni!",
+      "categoria": "Star Wars",
+      "precio": 60
+    },
+    {
+      "id": 7,
+      "url": "/assets/img/Skill-1.jpg",
+      "nombre": "Producto XYZ",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aspernatur nostrum fugiat impedit esse sint, at odit tempore. Quae rerum inventore laboriosam reiciendis voluptate fugit praesentium molestiae natus illo magni!",
+      "categoria": "Consolas",
+      "precio": 60
+    },
+    {
+      "id": 8,
+      "url": "/assets/img/Skill-2.jpg",
+      "nombre": "Producto XYZ",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aspernatur nostrum fugiat impedit esse sint, at odit tempore. Quae rerum inventore laboriosam reiciendis voluptate fugit praesentium molestiae natus illo magni!",
+      "categoria": "Consolas",
+      "precio": 60
+    },
+    {
+      "id": 9,
+      "url": "/assets/img/unsplash_ZV7lnfyQLmA.jpg",
+      "nombre": "Producto XYZ",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aspernatur nostrum fugiat impedit esse sint, at odit tempore. Quae rerum inventore laboriosam reiciendis voluptate fugit praesentium molestiae natus illo magni!",
+      "categoria": "Consolas",
+      "precio": 60
+    },
+    {
+      "id": 10,
+      "url": "/assets/img/unsplash_wa5z9o9fgjw.jpg",
+      "nombre": "Producto XYZ",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aspernatur nostrum fugiat impedit esse sint, at odit tempore. Quae rerum inventore laboriosam reiciendis voluptate fugit praesentium molestiae natus illo magni!",
+      "categoria": "Consolas",
+      "precio": 60
+    },
+    {
+      "id": 11,
+      "url": "/assets/img/unsplash_Zjn4dT993-g.jpg",
+      "nombre": "Producto XYZ",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aspernatur nostrum fugiat impedit esse sint, at odit tempore. Quae rerum inventore laboriosam reiciendis voluptate fugit praesentium molestiae natus illo magni!",
+      "categoria": "Consolas",
+      "precio": 60
+    },
+    {
+      "id": 12,
+      "url": "/assets/img/unsplash_k-xYhI3-gJM.jpg",
+      "nombre": "Producto XYZ",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aspernatur nostrum fugiat impedit esse sint, at odit tempore. Quae rerum inventore laboriosam reiciendis voluptate fugit praesentium molestiae natus illo magni!",
+      "categoria": "Consolas",
+      "precio": 60
+    },
+    {
+      "id": 13,
+      "url": "/assets/img/unsplash_fMP-oCze3AY.jpg",
+      "nombre": "Producto XYZ",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aspernatur nostrum fugiat impedit esse sint, at odit tempore. Quae rerum inventore laboriosam reiciendis voluptate fugit praesentium molestiae natus illo magni!",
+      "categoria": "Diversos",
+      "precio": 60
+    },
+    {
+      "id": 14,
+      "url": "/assets/img/unsplash_bUgaIaZysH0.jpg",
+      "nombre": "Producto XYZ",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aspernatur nostrum fugiat impedit esse sint, at odit tempore. Quae rerum inventore laboriosam reiciendis voluptate fugit praesentium molestiae natus illo magni!",
+      "categoria": "Diversos",
+      "precio": 60
+    },
+    {
+      "id": 15,
+      "url": "/assets/img/Skill-3.jpg",
+      "nombre": "Producto XYZ",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aspernatur nostrum fugiat impedit esse sint, at odit tempore. Quae rerum inventore laboriosam reiciendis voluptate fugit praesentium molestiae natus illo magni!",
+      "categoria": "Diversos",
+      "precio": 60
+    },
+    {
+      "id": 16,
+      "url": "/assets/img/Skill-4.jpg",
+      "nombre": "Producto XYZ",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aspernatur nostrum fugiat impedit esse sint, at odit tempore. Quae rerum inventore laboriosam reiciendis voluptate fugit praesentium molestiae natus illo magni!",
+      "categoria": "Diversos",
+      "precio": 60
+    },
+    {
+      "id": 17,
+      "url": "/assets/img/Skill-5.jpg",
+      "nombre": "Producto XYZ",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aspernatur nostrum fugiat impedit esse sint, at odit tempore. Quae rerum inventore laboriosam reiciendis voluptate fugit praesentium molestiae natus illo magni!",
+      "categoria": "Diversos",
+      "precio": 60
+    },
+    {
+      "id": 18,
+      "url": "/assets/img/Skill-6.jpg",
+      "nombre": "Producto XYZ",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aspernatur nostrum fugiat impedit esse sint, at odit tempore. Quae rerum inventore laboriosam reiciendis voluptate fugit praesentium molestiae natus illo magni!",
+      "categoria": "Diversos",
+      "precio": 60.99
+    }
+  ]
+}

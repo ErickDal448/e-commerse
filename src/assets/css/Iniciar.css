@@ -1,0 +1,19 @@
+.formIniciar{
+    padding: 5rem 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formIniciar h3{
+    margin-bottom: 2rem;
+}
+
+.formIniciar div{
+    width: 50%;
+}
+
+.btnSubmit{
+    margin-top: 1rem;
+}

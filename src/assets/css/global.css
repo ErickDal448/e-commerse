@@ -1,0 +1,38 @@
+
+:root{
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+    --cor-de-white: #FFFFFF;
+    --cor-de-fundo: #F5F5F5;
+    --cor-de-fondo-2: #EAF2FD;
+    --cor-de-shadow: #dad7d7;
+    --cor-de-link: #000;
+    --cor-de-btn: #2A7AE4;
+    --cor-de-footer: #EAF2FD;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo) ;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.header{
+    padding: 0;
+    width: 100%;
+    margin: 0px;
+}
+
+ol, ul,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+
+
+

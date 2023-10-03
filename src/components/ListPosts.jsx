@@ -23,7 +23,7 @@ const ListPosts = ({ posts }) => {
     };
 
     const handleEdit = (id) => {
-        navigate(`/Home/Editor/Editar/${id}`);
+        navigate(`https://erickdal448.github.io/e-commerse/build/Home/Editor/Editar/${id}`);
     };
 
     return (

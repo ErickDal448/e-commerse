@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import "../assets/css/ListCategories.css"
 import "../assets/css/Iniciar.css"
-import { Link } from "react-router-dom"
 import { buscar } from "../api/api"
 import { v4 as uuidv4 } from 'uuid'; // Importa la función para generar UUIDs
 

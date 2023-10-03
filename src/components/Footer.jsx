@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer">
             
             <div className="header__container">
-                <Link to="/" className="flex flex--center">
+                <Link to="https://erickdal448.github.io/e-commerse/build/" className="flex flex--center">
                     <img className="header__logo" src={image} alt="AluraLogo" />
                 </Link>
                 <ul className="ulAbout">

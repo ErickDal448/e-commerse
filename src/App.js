@@ -21,11 +21,11 @@ function App() {
       <FilterContext.Provider value={{ filter, setFilter }}>
         <Header/>
           <Routes>
-            <Route path='/' element={<Home/>} />
-            <Route path='/login' element={<LogIn/>} />
-            <Route path='/Home/Editor' element={<Home/>} />
-            <Route path='/Home/Editor/Crear' element={<AddProduct/>} />
-            <Route path='/Home/Editor/Editar/:id' element={<EditProduct/>} />
+            <Route path='https://erickdal448.github.io/e-commerse/build/' element={<Home/>} />
+            <Route path='https://erickdal448.github.io/e-commerse/build/login' element={<LogIn/>} />
+            <Route path='https://erickdal448.github.io/e-commerse/build/Home/Editor' element={<Home/>} />
+            <Route path='https://erickdal448.github.io/e-commerse/build/Home/Editor/Crear' element={<AddProduct/>} />
+            <Route path='https://erickdal448.github.io/e-commerse/build/Home/Editor/Editar/:id' element={<EditProduct/>} />
             <Route path='*' element={<Page404 />} />
           </Routes>
         <Footer/>

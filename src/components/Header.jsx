@@ -43,7 +43,7 @@ const Header = (props) => {
         <header className="header">
             
             <div className="header__container">
-                    <Link  to={location.pathname !== '/' ? '/Home/Editor'  : {}}  className="flex flex--center">
+                    <Link  to={location.pathname !== 'https://erickdal448.github.io/e-commerse/build/' ? 'https://erickdal448.github.io/e-commerse/build/Home/Editor'  : {}}  className="flex flex--center">
                         <img ref={logoRef} className="header__logo" src={image} alt="AluraLogo" />
                     </Link>
                     <div className="input-group searchDiv">
@@ -54,8 +54,8 @@ const Header = (props) => {
                     </div>
                 
             </div>
-            {location.pathname === '/' && (
-                <Link to="/login" className="login-link">
+            {location.pathname === 'https://erickdal448.github.io/e-commerse/build/' && (
+                <Link to="https://erickdal448.github.io/e-commerse/build/login" className="login-link">
                     <BtnLogin type="button" className="btn btn-outline-primary btnToLogin">Login</BtnLogin>
                 </Link>
             )}

@@ -1,7 +1,7 @@
 import axios from "axios"
 
 export const api = axios.create({
-    baseURL: "https://my-json-server.typicode.com/ErickDal448/Json-db/db"
+    baseURL: "https://my-json-server.typicode.com/ErickDal448/Json-db/"
 })
 
 export const buscar = async (url, setData = null) => {

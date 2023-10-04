@@ -1,4 +1,5 @@
 import { useLocation, useNavigate  } from 'react-router-dom';
+import data from '../api/data.json'
 
 const ListPosts = ({ posts }) => {
     
@@ -7,17 +8,13 @@ const ListPosts = ({ posts }) => {
 
     const handleDelete = async (id) => {
         if (window.confirm("¿Estás seguro de que quieres eliminar este post?")) {
-            try {
-                const response = await fetch(`/posts/${id}`, {
-                    method: 'DELETE',
-                });
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
+            // Encuentra el índice del post en la base de datos
+            const index = data.posts.findIndex(post => post.id === id);
+            // Si el post existe, elimínalo de la base de datos
+            if (index !== -1) {
+                data.posts.splice(index, 1);
                 console.log(`Post con id ${id} eliminado.`);
                 navigate(0);
-            } catch (error) {
-                console.log('Hubo un problema con la petición Fetch: ' + error.message);
             }
         }
     };
@@ -29,10 +26,10 @@ const ListPosts = ({ posts }) => {
     return (
         <>
             {
-                posts.map(post => {
+                posts.map(post => { // Usa data.posts en lugar de posts
                     const { id, nombre, url, categoria, precio } = post;
                     return<div className="card" >
-                        {location.pathname !== '/' && (<><i type="button" className="bi bi-pencil btn-edit btn-editar" data-bs-dismiss="modal" data-id={`${id}`} aria-label="Close" onClick={() => handleEdit(id)}></i>
+                        {location.pathname !== '/e-commerse/build' && (<><i type="button" className="bi bi-pencil btn-edit btn-editar" data-bs-dismiss="modal" data-id={`${id}`} aria-label="Close" onClick={() => handleEdit(id)}></i>
                         <i type="button" className="bi bi-trash btn-edit btn-delete" data-bs-dismiss="modal" aria-label="Close" data-id={`${id}`} onClick={() => handleDelete(id)}></i></>)}
                         <img src={`${url}`} className="card-img-top" alt="..." />
                             <div className="card-body">
@@ -48,4 +45,4 @@ const ListPosts = ({ posts }) => {
     )
 }
 
-export default ListPosts
+export default ListPosts;

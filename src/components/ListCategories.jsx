@@ -2,11 +2,12 @@ import { useState, useEffect } from 'react'
 import React from 'react'
 import "../assets/css/ListCategories.css"
 import { Link } from "react-router-dom"
-import { buscar } from "../api/api"
+import { buscar } from "../api/busquedaLocal"
 import ListPosts from './ListPosts'
 import { useLocation } from 'react-router-dom';
 import { FilterContext } from './FilterContext';
 import styled from '@emotion/styled'
+import data from '../api/data.json'
 
 const DivCard = styled.div`
     .card{
@@ -24,6 +25,8 @@ const ListCategories = () => {
     useEffect(() => {
         buscar(`/categorias`, setCategories)
         buscar(`/posts`, setPosts)
+        setPosts(data.posts);
+        setCategories(data.categorias);
 
         const handleResize = () => {
             setIsSmallScreen(window.innerWidth < 800);
@@ -40,10 +43,9 @@ const ListCategories = () => {
     const [categoryFilter, setCategoryFilter] = useState('');
 
     const filteredPosts = posts.filter(post => (post.nombre.includes(filter) || post.categoria.includes(filter)));
-
     return (
         <ul className="category-list container flex">
-            {location.pathname !== '/e-commerse/build/' && 
+            {location.pathname !== '/e-commerse/build' && 
             <div className='AllProducts'>
                 <h2>Todos los productos</h2>
                 <Link to={'/e-commerse/build/Home/Editor/Crear'}><button type="button" className="btn btn-primary">Agregar Producto</button></Link>
@@ -58,21 +60,19 @@ const ListCategories = () => {
                                     <DivCard className='divPosts' style={ {marginTop: '2rem' }}>
                                     {
                                         filteredPosts.map(post => (
-                                            <ListPosts posts={[post]} />
+                                            <ListPosts posts={[post]}   />
                                         ))
                                     }
                                     </DivCard>
                                 </li>
-                           
                     </div>
                 ) : (
                     categories.map(category => (
                         categoryFilter === '' || category.id === categoryFilter ? (
                           <li className={`category-list__category category-list__category--${category.id}`}
-                            style={location.pathname !== '/e-commerse/build/' ? { paddingTop: '0rem' } : {}}
-                          >
+                            style={location.pathname !== '/e-commerse/build' ? { paddingTop: '0rem' } : {}}>
                             <div className='divCategorie'>
-                                {location.pathname === '/e-commerse/build/' && (
+                                {location.pathname === '/e-commerse/build' && (
                                     <>
                                         <h2>{category.id} </h2>
                                         <button 
@@ -84,19 +84,17 @@ const ListCategories = () => {
                                     </>
                                 )}
                             </div>
-    
+                    
                             <div className='divPosts'>
-    
-                            {(categoryFilter === '' && location.pathname === '/e-commerse/build/') ? <ListPosts posts={filteredPosts.filter(post => post.categoria === category.id).slice(0, isSmallScreen ? 4 : 6)} /> : <ListPosts posts={filteredPosts.filter(post => post.categoria === category.id)} />}
+                                {location.pathname === '/e-commerse/build' && categoryFilter === '' ? <ListPosts posts={filteredPosts.filter(post => post.categoria === category.id).slice(0, isSmallScreen ? 4 : 6)} /> : <ListPosts posts={filteredPosts.filter(post => post.categoria === category.id)} />}
                             </div>
                           </li>
                         ) : null
-                      ))
+                    ))
+                    
                 )
             }
         </ul>
     )
-    
 }
-
 export default ListCategories;

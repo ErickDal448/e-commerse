@@ -3,6 +3,9 @@ import "../assets/css/ListCategories.css"
 import "../assets/css/Iniciar.css"
 import { buscar } from "../api/api"
 import { v4 as uuidv4 } from 'uuid'; // Importa la función para generar UUIDs
+import { api } from '../api/api';
+
+import { useNavigate } from 'react-router-dom';
 
 const Crear = () => {
     const [categories, setCategories] = useState([]);
@@ -14,6 +17,7 @@ const Crear = () => {
     const nombreErrorRef = useRef();
     const precioErrorRef = useRef();
     const descripcionErrorRef = useRef();
+    const navigate = useNavigate();
 
     useEffect(() => {
         buscar(`/categorias`, setCategories)
@@ -60,21 +64,19 @@ const Crear = () => {
                 categoria: document.getElementById('inCategoria').value,
                 precio: parseFloat(document.getElementById('inPrecio').value)
             };
-            fetch('/posts', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(newProduct),
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
+            
+            // Asegúrate de reemplazar 'your-json-server-url' con la URL de tu servidor JSON
+            api.post('/posts', newProduct)
+            .then(response => {
+                console.log('Success:', response.data);
+                navigate(-1);
+                // Aquí puedes actualizar el estado de tu aplicación para reflejar la adición del nuevo producto
             })
             .catch((error) => {
-                console.error('Error:', error);
+                console.error('Hubo un problema con la petición Fetch: ' + error.message);
             });
         }
+        
     };
 
     return (

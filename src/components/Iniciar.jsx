@@ -4,6 +4,7 @@ import "../assets/css/Iniciar.css"
 import { Link } from "react-router-dom"
 import { buscar } from "../api/api"
 import { useNavigate } from 'react-router-dom'
+import data from '../api/data.json'
 
 const Iniciar = () => {
     const navigate  = useNavigate();
@@ -45,16 +46,16 @@ const Iniciar = () => {
         }
 
         if (isValid) {
-            const user = await buscar(`/User?email=${email}&Password=${password}`);
+        const user = data.User.find(user => user.email === email && user.Password === password);
 
-            if (user.length > 0) {
-                // El usuario existe, redirige a la página siguiente
-                navigate('/e-commerse/build/Home/Editor');
-            } else {
-                // Usuario no encontrado, muestra una alerta
-                alert("Usuario no encontrado...");
-            }
+        if (user) {
+            // El usuario existe, redirige a la página siguiente
+            navigate('/e-commerse/build/Home/Editor');
+        } else {
+            // Usuario no encontrado, muestra una alerta
+            alert("Usuario no encontrado...");
         }
+    }
     };
 
     useEffect(() => {

@@ -17,7 +17,7 @@ const Editar = () => {
     const handleSubmit = async (event) => {
         event.preventDefault(); // Previene la recarga de la página
         try {
-            const response = await fetch(`http://https://my-json-server.typicode.com/ErickDal448/Json-db/db/posts/${id}`, {
+            const response = await fetch(`/posts/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

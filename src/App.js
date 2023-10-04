@@ -21,7 +21,7 @@ function App() {
       <FilterContext.Provider value={{ filter, setFilter }}>
         <Header/>
           <Routes>
-            <Route path='/e-commerse/build/' element={<Home/>} />
+            <Route path='/e-commerse/build' element={<Home/>} />
             <Route path='/e-commerse/build/login' element={<LogIn/>} />
             <Route path='/e-commerse/build/Home/Editor' element={<Home/>} />
             <Route path='/e-commerse/build/Home/Editor/Crear' element={<AddProduct/>} />

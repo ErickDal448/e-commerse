@@ -60,7 +60,7 @@ const Crear = () => {
                 categoria: document.getElementById('inCategoria').value,
                 precio: parseFloat(document.getElementById('inPrecio').value)
             };
-            fetch('https://my-json-server.typicode.com/ErickDal448/Json-db/db/posts', {
+            fetch('/posts', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -43,7 +43,7 @@ const ListCategories = () => {
 
     return (
         <ul className="category-list container flex">
-            {location.pathname !== '/' && 
+            {location.pathname !== '/e-commerse/build/' && 
             <div className='AllProducts'>
                 <h2>Todos los productos</h2>
                 <Link to={'/e-commerse/build/Home/Editor/Crear'}><button type="button" className="btn btn-primary">Agregar Producto</button></Link>

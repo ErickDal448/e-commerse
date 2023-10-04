@@ -8,7 +8,7 @@ const ListPosts = ({ posts }) => {
     const handleDelete = async (id) => {
         if (window.confirm("¿Estás seguro de que quieres eliminar este post?")) {
             try {
-                const response = await fetch(`http://https://my-json-server.typicode.com/ErickDal448/Json-db/db/posts/${id}`, {
+                const response = await fetch(`/posts/${id}`, {
                     method: 'DELETE',
                 });
                 if (!response.ok) {

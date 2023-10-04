@@ -45,7 +45,7 @@ const ListCategories = () => {
     const filteredPosts = posts.filter(post => (post.nombre.includes(filter) || post.categoria.includes(filter)));
     return (
         <ul className="category-list container flex">
-            {location.pathname !== '/build' && 
+            {location.pathname !== '/e-commerse/build/' && 
             <div className='AllProducts'>
                 <h2>Todos los productos</h2>
                 <Link to={'/e-commerse/build/Home/Editor/Crear'}><button type="button" className="btn btn-primary">Agregar Producto</button></Link>
@@ -70,9 +70,9 @@ const ListCategories = () => {
                     categories.map(category => (
                         categoryFilter === '' || category.id === categoryFilter ? (
                           <li className={`category-list__category category-list__category--${category.id}`}
-                            style={location.pathname !== '/build' ? { paddingTop: '0rem' } : {}}>
+                            style={location.pathname !== '/e-commerse/build/' ? { paddingTop: '0rem' } : {}}>
                             <div className='divCategorie'>
-                                {location.pathname === '/build' && (
+                                {location.pathname === '/e-commerse/build/' && (
                                     <>
                                         <h2>{category.id} </h2>
                                         <button 
@@ -86,7 +86,7 @@ const ListCategories = () => {
                             </div>
                     
                             <div className='divPosts'>
-                                {location.pathname === '/build' && categoryFilter === '' ? <ListPosts posts={filteredPosts.filter(post => post.categoria === category.id).slice(0, isSmallScreen ? 4 : 6)} /> : <ListPosts posts={filteredPosts.filter(post => post.categoria === category.id)} />}
+                                {location.pathname === '/e-commerse/build/' && categoryFilter === '' ? <ListPosts posts={filteredPosts.filter(post => post.categoria === category.id).slice(0, isSmallScreen ? 4 : 6)} /> : <ListPosts posts={filteredPosts.filter(post => post.categoria === category.id)} />}
                             </div>
                           </li>
                         ) : null

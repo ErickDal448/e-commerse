@@ -29,7 +29,7 @@ const ListPosts = ({ posts }) => {
                 posts.map(post => { // Usa data.posts en lugar de posts
                     const { id, nombre, url, categoria, precio } = post;
                     return<div className="card" >
-                        {location.pathname !== '/e-commerse/build' && (<><i type="button" className="bi bi-pencil btn-edit btn-editar" data-bs-dismiss="modal" data-id={`${id}`} aria-label="Close" onClick={() => handleEdit(id)}></i>
+                        {location.pathname !== '/e-commerse/build/' && (<><i type="button" className="bi bi-pencil btn-edit btn-editar" data-bs-dismiss="modal" data-id={`${id}`} aria-label="Close" onClick={() => handleEdit(id)}></i>
                         <i type="button" className="bi bi-trash btn-edit btn-delete" data-bs-dismiss="modal" aria-label="Close" data-id={`${id}`} onClick={() => handleDelete(id)}></i></>)}
                         <img src={`${url}`} className="card-img-top" alt="..." />
                             <div className="card-body">
